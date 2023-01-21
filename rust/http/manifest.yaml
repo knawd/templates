@@ -1,0 +1,6 @@
+builders:
+  default: quay.io/knawd/builder:rust
+
+healthEndpoints:
+  liveness: /health/readiness
+  readiness: /health/liveness
