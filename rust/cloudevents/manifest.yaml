@@ -1,6 +1,8 @@
-builders:
-  default: quay.io/knawd/builder:rust
-
-healthEndpoints:
-  liveness: /health/readiness
-  readiness: /health/liveness
+build:
+  builder: quay.io/knawd/builder:rust
+deploy:
+  annotations:
+    module.wasm.image/variant: compat-smart
+  healthEndpoints:
+    liveness: /health/readiness
+    readiness: /health/liveness
