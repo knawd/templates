@@ -1,8 +1,9 @@
 buildpacks:
   - quay.io/knawd/builder:rust
 
-annotations:
-  module.wasm.image/variant: compat-smart
-healthEndpoints:
-  liveness: /health/readiness
-  readiness: /health/liveness
+DeploySpec:
+  annotations:
+    module.wasm.image/variant: compat-smart
+  healthEndpoints:
+    liveness: /health/readiness
+    readiness: /health/liveness
