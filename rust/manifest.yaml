@@ -1,6 +1,5 @@
-builders:
-  default: quay.io/knawd/builder:rust
-  base: quay.io/knawd/builder:rust
+buildpacks:
+  - quay.io/knawd/builder:rust
 
 annotations:
   module.wasm.image/variant: compat-smart
